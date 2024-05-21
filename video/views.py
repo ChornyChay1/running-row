@@ -7,14 +7,14 @@ from .models import VideoRequest
 logger = logging.getLogger(__name__)
 
 def generate_video(request):
-    text = request.GET.get('text', '')  # Получаем текст из параметров запроса
-    output_path = "output.mp4"  # Определяем путь для выходного файла
+    text = request.GET.get('text', '')   
+    output_path = "output.mp4"  
     max_duration = 3
     fps = 60
     bg_color = (255, 192, 203)
     text_color = 'white'
     font_size = 60
-    default_speed = 800
+    default_speed = 500
 
     try:
         # Ваш код для генерации видео
